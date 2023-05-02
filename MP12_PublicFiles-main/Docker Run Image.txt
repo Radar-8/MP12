@@ -1,0 +1,1 @@
+docker run -dp 5035:5035 -e TYPE='cnn' -e DATASET='kmnist' mp12-python
