@@ -1,10 +1,8 @@
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-    name: free-service-quota
+    name: free-service
 spec:
     hard:
-        requests.cpu: "1"
-        requests.memory : 1Gi
+        requests.cpu: "0.9"
         limits.cpu: "2"
-        limits.memory: 2Gi
