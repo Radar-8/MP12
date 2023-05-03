@@ -1,2 +1,16 @@
-dataset: mnist
-type: ff
+apiVersion: batch/v1
+kind: Job
+metadata:
+    name: premiumpod
+spec:
+    template:
+        spec:
+            containers:
+            - name: dockerimg
+              image: radar8/mp12classifier:mp12-python
+              env:
+                - name: DATASET
+                  value: "mnist"
+                - name: TYPE
+                  value: "ff"
+            restartPolicy: Never
